@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.06" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>00000000000000000000001</MsgId>
+      <CreDtTm>2001-01-01T00:00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>58.00</CtrlSum>
+      <InitgPty>
+        <Nm>ООО Рога и Копыта</Nm>
+        <Id>
+          <OrgId>
+            <Othr>
+              <Id>0000000000</Id>
+              <SchmeNm>
+                <Prtry>000000</Prtry>
+              </SchmeNm>
+            </Othr>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>00000000000000000000001</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <ReqdExctnDt>2001-01-01</ReqdExctnDt>
+      <Dbtr>
+        <Nm>ООО Рога и Копыта</Nm>
+        <Id>
+          <OrgId>
+            <Othr>
+              <Id>0000000000</Id>
+              <SchmeNm>
+                <Cd>TXID</Cd>
+              </SchmeNm>
+            </Othr>
+          </OrgId>
+        </Id>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <Othr>
+            <Id>40702810901300013000</Id>
+          </Othr>
+        </Id>
+        <Ccy>RUB</Ccy>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <ClrSysMmbId>
+            <ClrSysId>
+              <Cd>RUCBC</Cd>
+            </ClrSysId>
+            <MmbId>044525593</MmbId>
+          </ClrSysMmbId>
+          <Nm>АО "АЛЬФА-БАНК", Г МОСКВА, УЛ КАЛАНЧЁВСКАЯ, 27</Nm>
+          <PstlAdr>
+            <Ctry>RU</Ctry>
+          </PstlAdr>
+        </FinInstnId>
+      </DbtrAgt>
+      <DbtrAgtAcct>
+        <Id>
+          <Othr>
+            <Id>30101810200000000593</Id>
+            <SchmeNm>
+              <Cd>BBAN</Cd>
+            </SchmeNm>
+          </Othr>
+        </Id>
+      </DbtrAgtAcct>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>00000000000000000000001</InstrId>
+          <EndToEndId>85114</EndToEndId>
+        </PmtId>
+        <PmtTpInf>
+          <SvcLvl>
+            <Cd>NURG</Cd>
+          </SvcLvl>
+        </PmtTpInf>
+        <Amt>
+          <InstdAmt Ccy="RUB">58.00</InstdAmt>
+        </Amt>
+        <ChrgBr>DEBT</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>RUCBC</Cd>
+              </ClrSysId>
+              <MmbId>044525593</MmbId>
+            </ClrSysMmbId>
+            <Nm>АО "АЛЬФА-БАНК", Г МОСКВА, УЛ КАЛАНЧЁВСКАЯ, 27</Nm>
+            <PstlAdr>
+              <Ctry>RU</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <CdtrAgtAcct>
+          <Id>
+            <Othr>
+              <Id>30101810200000000593</Id>
+            </Othr>
+          </Id>
+        </CdtrAgtAcct>
+        <Cdtr>
+          <Nm>ООО Копыта и Рога</Nm>
+          <PstlAdr>
+            <Ctry>RU</Ctry>
+          </PstlAdr>
+          <Id>
+            <OrgId>
+              <Othr>
+                <Id>5036045205</Id>
+                <SchmeNm>
+                  <Cd>TXID</Cd>
+                </SchmeNm>
+              </Othr>
+            </OrgId>
+          </Id>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>40702810001850000500</Id>
+              <SchmeNm>
+                <Cd>BBAN</Cd>
+              </SchmeNm>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <Purp>
+          <Prtry>5</Prtry>
+        </Purp>
+        <Tax>
+          <Cdtr>
+            <TaxTp>509950001</TaxTp>
+          </Cdtr>
+          <Dbtr>
+            <TaxTp>997350001</TaxTp>
+          </Dbtr>
+        </Tax>
+        <RmtInf>
+          <Ustrd>Пополнение расчетного счета предприятия для текущей деятельности. НДС не облагается</Ustrd>
+          <Strd>
+            <RfrdDocInf>
+              <Tp>
+                <CdOrPrtry>
+                  <Prtry>POD</Prtry>
+                </CdOrPrtry>
+              </Tp>
+              <RltdDt>2001-01-01</RltdDt>
+            </RfrdDocInf>
+          </Strd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+    <SplmtryData>
+      <Envlp>
+      <SngtrSt><ds:Signature>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<ds:Transform Algorithm="http://www.w3.org/2002/06/xmldsig-filter2">
+<dsig-xpath:XPath xmlns:dsig-xpath="http://www.w3.org/2002/06/xmldsig-filter2" Filter="subtract">//ds:Signature</dsig-xpath:XPath>
+</ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+<ds:DigestValue>c+G+mBvYJ0bhZcAn+jBMdJ3GPTl2jbloY1mNglSf1jQ=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+YMHIwmRa0cgvdvG7P9ca0PZ9pFyPamLRfD6UBZ/38GLbrjS6P0PeWWeTeaCDj38nX+QH/fXd8Vvt
+crQ+Sgm4rA==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDYzCCAxKgAwIBAgITEgAsKdu1Zt4UCeJ0cAAAACwp2zAIBgYqhQMCAgMwfzEjMCEGCSqGSIb3
+DQEJARYUc3VwcG9ydEBjcnlwdG9wcm8ucnUxCzAJBgNVBAYTAlJVMQ8wDQYDVQQHEwZNb3Njb3cx
+FzAVBgNVBAoTDkNSWVBUTy1QUk8gTExDMSEwHwYDVQQDExhDUllQVE8tUFJPIFRlc3QgQ2VudGVy
+IDIwHhcNMTgwODIxMDgyODA3WhcNMTgxMTIxMDgzODA3WjBuMSQwIgYJKoZIhvcNAQkBFhVhbHhu
+ZHIuenVldkBnbWFpbC5jb20xFzAVBgNVBAMMDkFsZXhhbmRlciBadWV2MQ8wDQYDVQQHDAZNb3Nj
+b3cxDzANBgNVBAgMBk1vc2NvdzELMAkGA1UEBhMCUlUwZjAfBggqhQMHAQEBATATBgcqhQMCAiQA
+BggqhQMHAQECAgNDAARAP05VGc5T3amCXLqbLgzJSazeX4tvw8nmG3MWRwOP6NG7b4shzH2Oba2c
+nBKe2fiu9qeeBoGvPlSU2SqVuSMy16OCAXEwggFtMA8GA1UdDwEB/wQFAwMH8AAwEwYDVR0lBAww
+CgYIKwYBBQUHAwIwHQYDVR0OBBYEFIGvW/zq3EP07d6YY1wjs9wVFnyrMB8GA1UdIwQYMBaAFBUx
+fLCNGt5m1xWcSVKXFyS5AXqDMFkGA1UdHwRSMFAwTqBMoEqGSGh0dHA6Ly90ZXN0Y2EuY3J5cHRv
+cHJvLnJ1L0NlcnRFbnJvbGwvQ1JZUFRPLVBSTyUyMFRlc3QlMjBDZW50ZXIlMjAyLmNybDCBqQYI
+KwYBBQUHAQEEgZwwgZkwYQYIKwYBBQUHMAKGVWh0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L0Nl
+cnRFbnJvbGwvdGVzdC1jYS0yMDE0X0NSWVBUTy1QUk8lMjBUZXN0JTIwQ2VudGVyJTIwMi5jcnQw
+NAYIKwYBBQUHMAGGKGh0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L29jc3Avb2NzcC5zcmYwCAYG
+KoUDAgIDA0EAui7YJbL40FcUEqpsnA0sz+3LPZdh7L9RJas+B+95R0LonZWxq2kY5+b/HjwEu+a7
+GhhoWiIXWPkDC9C6kc4caQ==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature><ds:Signature>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<ds:Transform Algorithm="http://www.w3.org/2002/06/xmldsig-filter2">
+<dsig-xpath:XPath xmlns:dsig-xpath="http://www.w3.org/2002/06/xmldsig-filter2" Filter="subtract">//ds:Signature</dsig-xpath:XPath>
+</ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+<ds:DigestValue>c+G+mBvYJ0bhZcAn+jBMdJ3GPTl2jbloY1mNglSf1jQ=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+JDs4KX0+M2SfY2t8uZ7g8IE1Yj6Dvz5DJl0HYbsZfZNKO6NKm232uP35jO6R9kPQEhRzfzDbejUr
+ZOdFPJpQKQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDEzCCAsKgAwIBAgITEgAsX1qfV4O9Tu1/KQAAACxfWjAIBgYqhQMCAgMwfzEjMCEGCSqGSIb3
+DQEJARYUc3VwcG9ydEBjcnlwdG9wcm8ucnUxCzAJBgNVBAYTAlJVMQ8wDQYDVQQHEwZNb3Njb3cx
+FzAVBgNVBAoTDkNSWVBUTy1QUk8gTExDMSEwHwYDVQQDExhDUllQVE8tUFJPIFRlc3QgQ2VudGVy
+IDIwHhcNMTgwODI2MjEzODI0WhcNMTgxMTI2MjE0ODI0WjAeMRwwGgYDVQQDDBNBbGV4YW5kZXIg
+WnVldiAyMDEyMGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQGvPH+w3eyK8
+cIAC7bNqJaCEwqRGmmfZzWiq9cVmENl5gQdn9PH3J3wCYRY1f2vymnbv4ZzRtInmqWZezHCL05Gj
+ggFxMIIBbTAPBgNVHQ8BAf8EBQMDB/AAMBMGA1UdJQQMMAoGCCsGAQUFBwMCMB0GA1UdDgQWBBQM
+zZasrTXTAtbzMaDYnF94KPCA2TAfBgNVHSMEGDAWgBQVMXywjRreZtcVnElSlxckuQF6gzBZBgNV
+HR8EUjBQME6gTKBKhkhodHRwOi8vdGVzdGNhLmNyeXB0b3Byby5ydS9DZXJ0RW5yb2xsL0NSWVBU
+Ty1QUk8lMjBUZXN0JTIwQ2VudGVyJTIwMi5jcmwwgakGCCsGAQUFBwEBBIGcMIGZMGEGCCsGAQUF
+BzAChlVodHRwOi8vdGVzdGNhLmNyeXB0b3Byby5ydS9DZXJ0RW5yb2xsL3Rlc3QtY2EtMjAxNF9D
+UllQVE8tUFJPJTIwVGVzdCUyMENlbnRlciUyMDIuY3J0MDQGCCsGAQUFBzABhihodHRwOi8vdGVz
+dGNhLmNyeXB0b3Byby5ydS9vY3NwL29jc3Auc3JmMAgGBiqFAwICAwNBAN+DGtgYcGXBc7mwjVZX
+GArnMG+84EviT5s32WzludtRRI/LLBZU3nZ8/3DAcFQOXY0la7D2VwhJf8Tg1fx2Jfg=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></SngtrSt></Envlp>
+    </SplmtryData>
+  </CstmrCdtTrfInitn>
+</Document>

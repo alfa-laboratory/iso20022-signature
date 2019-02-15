@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.060.001.03" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <AcctRptgReq>
+    <GrpHdr>
+      <MsgId>00000000000000000000001</MsgId>
+      <CreDtTm>2001-01-01T00:00:00</CreDtTm>
+    </GrpHdr>
+    <RptgReq>
+      <Id>00000000000000000000001</Id>
+      <ReqdMsgNmId>HMQSTASCF</ReqdMsgNmId>
+      <Acct>
+        <Id>
+          <Othr>
+            <Id>40702810901300013000</Id>
+          </Othr>
+        </Id>
+      </Acct>
+      <AcctOwnr>
+        <Pty>
+          <Nm>ООО Рога и Копыта</Nm>
+        </Pty>
+      </AcctOwnr>
+      <RptgPrd>
+        <FrToDt>
+          <FrDt>2001-01-01</FrDt>
+          <ToDt>2001-01-01</ToDt>
+        </FrToDt>
+        <FrToTm>
+          <FrTm>00:00:00</FrTm>
+          <ToTm>24:00:00</ToTm>
+        </FrToTm>
+        <Tp>ALLL</Tp>
+      </RptgPrd>
+    </RptgReq>
+    <SplmtryData>
+      <Envlp>
+      </Envlp>
+    </SplmtryData>
+  </AcctRptgReq>
+</Document>

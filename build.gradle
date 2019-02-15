@@ -1,0 +1,29 @@
+group = "ru.alfabank"
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.13'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'com.google.guava', name: 'guava', version: '24.0-jre'
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'org.apache.santuario', name: 'xmlsec', version: '1.5.8'
+
+    //Согласно ЖТЯИ.00091-01 33 01. Руководство программиста.pdf
+    //Библиотека JCPxml.jar должна находиться вместе с библиотекой xmlsec.jar
+    //Для работы проекта необходимо перенести данную библиотеку из ***/jre/ext/ в директорию libs проекта
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10.2'
+    distributionUrl = "http://services.gradle.org/distributions/gradle-$gradleVersion-bin.zip"
+}

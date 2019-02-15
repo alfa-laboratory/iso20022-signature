@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Document xmlns="urn:iso:std:iso:20022:tech:xsd:auth.026.001.01" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <CcyCtrlReqOrLttr>
+    <GrpHdr>
+      <MsgId>00000000000000000000001</MsgId>
+      <CreDtTm>2001-01-01T00:00:00</CreDtTm>
+      <NbOfItms>1</NbOfItms>
+      <InitgPty>
+        <Pty>
+          <Nm>Холдинг</Nm>
+          <Id>
+            <OrgId>
+              <AnyBIC>XXXXXXXXXXXX</AnyBIC>
+              <Othr>
+                <Id>00000000</Id>
+                <SchmeNm>
+                  <Cd>BANK</Cd>
+                </SchmeNm>
+              </Othr>
+            </OrgId>
+          </Id>
+        </Pty>
+      </InitgPty>
+    </GrpHdr>
+    <ReqOrLttr>
+      <ReqOrLttrId>00000000000000000000001</ReqOrLttrId>
+      <Dt>2017-08-04</Dt>
+      <Sndr>
+        <Pty>
+          <Nm>Холдинг</Nm>
+          <Id>
+            <OrgId>
+              <AnyBIC>XXXXXXXXXXXX</AnyBIC>
+              <Othr>
+                <Id>00000000</Id>
+                <SchmeNm>
+                  <Cd>BANK</Cd>
+                </SchmeNm>
+              </Othr>
+            </OrgId>
+          </Id>
+        </Pty>
+      </Sndr>
+      <Rcvr>
+        <Pty>
+          <Nm/>
+          <Id>
+            <OrgId>
+              <Othr>
+                <Id>XXXXXXXXXXXX</Id>
+                <SchmeNm>
+                  <Prtry>00000000</Prtry>
+                </SchmeNm>
+              </Othr>
+            </OrgId>
+          </Id>
+        </Pty>
+      </Rcvr>
+      <Sbjt>test</Sbjt>
+      <Tp>OTHR</Tp>
+      <Desc>test</Desc>
+      <RspnReqrd>false</RspnReqrd>
+    </ReqOrLttr>
+    <SplmtryData>
+      <Envlp>
+      <SngtrSt><ds:Signature>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<ds:Transform Algorithm="http://www.w3.org/2002/06/xmldsig-filter2">
+<dsig-xpath:XPath xmlns:dsig-xpath="http://www.w3.org/2002/06/xmldsig-filter2" Filter="subtract">//ds:Signature</dsig-xpath:XPath>
+</ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+<ds:DigestValue>ZRIeTF8Xo4suL/4uPRvgTXX6RFT76mUrc9e0AUD8D9M=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+1Bw+88/SLrkPcvqhoCbFPrRFFRvnTbluoOlGsfxSQ/ONEu7rk02XJdPIpmQJRtq0IvPCZSCiW8IU
+h9+0aVslQQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDYzCCAxKgAwIBAgITEgAsKdu1Zt4UCeJ0cAAAACwp2zAIBgYqhQMCAgMwfzEjMCEGCSqGSIb3
+DQEJARYUc3VwcG9ydEBjcnlwdG9wcm8ucnUxCzAJBgNVBAYTAlJVMQ8wDQYDVQQHEwZNb3Njb3cx
+FzAVBgNVBAoTDkNSWVBUTy1QUk8gTExDMSEwHwYDVQQDExhDUllQVE8tUFJPIFRlc3QgQ2VudGVy
+IDIwHhcNMTgwODIxMDgyODA3WhcNMTgxMTIxMDgzODA3WjBuMSQwIgYJKoZIhvcNAQkBFhVhbHhu
+ZHIuenVldkBnbWFpbC5jb20xFzAVBgNVBAMMDkFsZXhhbmRlciBadWV2MQ8wDQYDVQQHDAZNb3Nj
+b3cxDzANBgNVBAgMBk1vc2NvdzELMAkGA1UEBhMCUlUwZjAfBggqhQMHAQEBATATBgcqhQMCAiQA
+BggqhQMHAQECAgNDAARAP05VGc5T3amCXLqbLgzJSazeX4tvw8nmG3MWRwOP6NG7b4shzH2Oba2c
+nBKe2fiu9qeeBoGvPlSU2SqVuSMy16OCAXEwggFtMA8GA1UdDwEB/wQFAwMH8AAwEwYDVR0lBAww
+CgYIKwYBBQUHAwIwHQYDVR0OBBYEFIGvW/zq3EP07d6YY1wjs9wVFnyrMB8GA1UdIwQYMBaAFBUx
+fLCNGt5m1xWcSVKXFyS5AXqDMFkGA1UdHwRSMFAwTqBMoEqGSGh0dHA6Ly90ZXN0Y2EuY3J5cHRv
+cHJvLnJ1L0NlcnRFbnJvbGwvQ1JZUFRPLVBSTyUyMFRlc3QlMjBDZW50ZXIlMjAyLmNybDCBqQYI
+KwYBBQUHAQEEgZwwgZkwYQYIKwYBBQUHMAKGVWh0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L0Nl
+cnRFbnJvbGwvdGVzdC1jYS0yMDE0X0NSWVBUTy1QUk8lMjBUZXN0JTIwQ2VudGVyJTIwMi5jcnQw
+NAYIKwYBBQUHMAGGKGh0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L29jc3Avb2NzcC5zcmYwCAYG
+KoUDAgIDA0EAui7YJbL40FcUEqpsnA0sz+3LPZdh7L9RJas+B+95R0LonZWxq2kY5+b/HjwEu+a7
+GhhoWiIXWPkDC9C6kc4caQ==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature><ds:Signature>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<ds:Transform Algorithm="http://www.w3.org/2002/06/xmldsig-filter2">
+<dsig-xpath:XPath xmlns:dsig-xpath="http://www.w3.org/2002/06/xmldsig-filter2" Filter="subtract">//ds:Signature</dsig-xpath:XPath>
+</ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+<ds:DigestValue>ZRIeTF8Xo4suL/4uPRvgTXX6RFT76mUrc9e0AUD8D9M=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+kXo6vXy8Mp2D5ns7OnSZV+R1hxyoAR/NiTf0xIpCkoTTh6Z+L3mkwvoQrhdN3U2yWHPDtYMpRVlb
+dew/HUQpdg==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDEzCCAsKgAwIBAgITEgAsX1qfV4O9Tu1/KQAAACxfWjAIBgYqhQMCAgMwfzEjMCEGCSqGSIb3
+DQEJARYUc3VwcG9ydEBjcnlwdG9wcm8ucnUxCzAJBgNVBAYTAlJVMQ8wDQYDVQQHEwZNb3Njb3cx
+FzAVBgNVBAoTDkNSWVBUTy1QUk8gTExDMSEwHwYDVQQDExhDUllQVE8tUFJPIFRlc3QgQ2VudGVy
+IDIwHhcNMTgwODI2MjEzODI0WhcNMTgxMTI2MjE0ODI0WjAeMRwwGgYDVQQDDBNBbGV4YW5kZXIg
+WnVldiAyMDEyMGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQGvPH+w3eyK8
+cIAC7bNqJaCEwqRGmmfZzWiq9cVmENl5gQdn9PH3J3wCYRY1f2vymnbv4ZzRtInmqWZezHCL05Gj
+ggFxMIIBbTAPBgNVHQ8BAf8EBQMDB/AAMBMGA1UdJQQMMAoGCCsGAQUFBwMCMB0GA1UdDgQWBBQM
+zZasrTXTAtbzMaDYnF94KPCA2TAfBgNVHSMEGDAWgBQVMXywjRreZtcVnElSlxckuQF6gzBZBgNV
+HR8EUjBQME6gTKBKhkhodHRwOi8vdGVzdGNhLmNyeXB0b3Byby5ydS9DZXJ0RW5yb2xsL0NSWVBU
+Ty1QUk8lMjBUZXN0JTIwQ2VudGVyJTIwMi5jcmwwgakGCCsGAQUFBwEBBIGcMIGZMGEGCCsGAQUF
+BzAChlVodHRwOi8vdGVzdGNhLmNyeXB0b3Byby5ydS9DZXJ0RW5yb2xsL3Rlc3QtY2EtMjAxNF9D
+UllQVE8tUFJPJTIwVGVzdCUyMENlbnRlciUyMDIuY3J0MDQGCCsGAQUFBzABhihodHRwOi8vdGVz
+dGNhLmNyeXB0b3Byby5ydS9vY3NwL29jc3Auc3JmMAgGBiqFAwICAwNBAN+DGtgYcGXBc7mwjVZX
+GArnMG+84EviT5s32WzludtRRI/LLBZU3nZ8/3DAcFQOXY0la7D2VwhJf8Tg1fx2Jfg=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></SngtrSt></Envlp>
+    </SplmtryData>
+  </CcyCtrlReqOrLttr>
+</Document>
