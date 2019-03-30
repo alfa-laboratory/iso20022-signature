@@ -24,9 +24,11 @@ public class PaymentSignatureExample {
     private static final String PAYMENT_SIGNATURE_ELEMENT_XPATH = "/*[local-name()='Document' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:pain.001.001.06']" +
             "/*[local-name()='CstmrCdtTrfInitn' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:pain.001.001.06']" +
             "/*[local-name()='SplmtryData' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:pain.001.001.06']" +
-            "/*[local-name()='Envlp' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:pain.001.001.06']";
+            "/*[local-name()='Envlp' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:pain.001.001.06']" +
+            "/*[local-name()='SngtrSt' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:pain.001.001.06']";
 
-    private static final List<Certificate> certificates = Lists.newArrayList();
+    private static final List<Certificate> certificates = Lists.newArrayList(
+    );
 
     public static void main(String[] args) throws Exception {
         SignatureService signatureService = new SignatureService();

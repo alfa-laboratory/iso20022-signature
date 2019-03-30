@@ -24,9 +24,11 @@ public class StatementSignatureExample {
     private static final String STATEMENT_SIGNATURE_ELEMENT_XPATH = "/*[local-name()='Document' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:camt.060.001.03']" +
             "/*[local-name()='AcctRptgReq' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:camt.060.001.03']" +
             "/*[local-name()='SplmtryData' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:camt.060.001.03']" +
-            "/*[local-name()='Envlp' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:camt.060.001.03']";
+            "/*[local-name()='Envlp' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:camt.060.001.03']" +
+            "/*[local-name()='SngtrSt' and namespace-uri()='urn:iso:std:iso:20022:tech:xsd:camt.060.001.03']";
 
-    private static final List<Certificate> certificates = Lists.newArrayList();
+    private static final List<Certificate> certificates = Lists.newArrayList(
+    );
 
     public static void main(String[] args) throws Exception {
         SignatureService signatureService = new SignatureService();

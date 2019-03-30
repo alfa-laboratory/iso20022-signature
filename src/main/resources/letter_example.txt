@@ -63,6 +63,8 @@
     </ReqOrLttr>
     <SplmtryData>
       <Envlp>
+        <SngtrSt>
+        </SngtrSt>
       </Envlp>
     </SplmtryData>
   </CcyCtrlReqOrLttr>

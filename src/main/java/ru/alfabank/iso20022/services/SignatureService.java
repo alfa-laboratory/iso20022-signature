@@ -14,6 +14,7 @@ import org.apache.xml.security.transforms.Transforms;
 import org.apache.xml.security.transforms.params.XPath2FilterContainer;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import ru.CryptoPro.JCPxml.xmldsig.JCPXMLDSigInit;
@@ -28,6 +29,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.io.ByteArrayOutputStream;
 import java.io.StringReader;
@@ -37,7 +39,6 @@ import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class SignatureService {
-    private static final String SIGNATURE_XML_ELEMENT = "SngtrSt";
     private static final String SIGNATURE_FILTER_XML_ELEMENT = "//ds:Signature";
 
     private KeyStore ks;
@@ -59,16 +60,8 @@ public class SignatureService {
         DocumentBuilder documentBuilder = dbf.newDocumentBuilder();
         Document doc = documentBuilder.parse(new InputSource(new StringReader(request)));
 
-        //Добавление xml элемента для подписи <SngtrSt></SngtrSt>
-        XPath xpath = XPathFactory.newInstance().newXPath();
-        Element signatureNode = doc.createElement(SIGNATURE_XML_ELEMENT);
-        NodeList link = (NodeList) xpath.evaluate(signedElementXpath
-                , doc, XPathConstants.NODESET);
-        if (link.item(0) == null) {
-            throw new RuntimeException(String.format("Signature element with xpath: %s doesnt exist", signedElementXpath));
-        }
-        link.item(0)
-                .appendChild(signatureNode);
+        //Получение элемента SngtrSt для наложения подписи
+        Node signatureNode = getSignatureNode(doc, signedElementXpath);
 
         //Процесс наложения подписи всеми указанными сертификатами.
         for (Certificate certificate : certificates) {
@@ -84,7 +77,18 @@ public class SignatureService {
         return new String(baos.toByteArray());
     }
 
-    private XMLSignature sign(String alias, String password, Document doc, Element element) throws Exception {
+    private Node getSignatureNode(Document doc, String signedElementXpath) throws XPathExpressionException {
+        XPath xpath = XPathFactory.newInstance().newXPath();
+        NodeList link = (NodeList) xpath.evaluate(signedElementXpath
+                , doc, XPathConstants.NODESET);
+        if (link.item(0) == null) {
+            throw new RuntimeException(String.format("Signature element with xpath: %s doesnt exist", signedElementXpath));
+        } else {
+            return link.item(0);
+        }
+    }
+
+    private XMLSignature sign(String alias, String password, Document doc, Node element) throws Exception {
         //Получение секретного ключа и сертификата из HDImageStore keystore
         PrivateKey privateKey = (PrivateKey) ks.getKey(alias, StringUtils.isNotBlank(password) ? password.toCharArray() : null);
         X509Certificate cert = (X509Certificate) ks.getCertificate(alias);
@@ -95,7 +99,7 @@ public class SignatureService {
         return sign(privateKey, cert, doc, element);
     }
 
-    private XMLSignature sign(PrivateKey privateKey, X509Certificate cert, Document doc, Element element) throws Exception {
+    private XMLSignature sign(PrivateKey privateKey, X509Certificate cert, Document doc, Node element) throws Exception {
         XMLSignature sig = new XMLSignature(doc, "", getSignatureMethod(privateKey));
         element.appendChild(sig.getElement());
         sig.addDocument("", buildTransforms(doc), getDigestMethod(privateKey));
